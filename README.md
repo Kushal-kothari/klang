@@ -1,17 +1,17 @@
 
-# xlang
+# klang
 
 --------------------------------------------------------------------------------
 
 # What Is It?
 
-xlang is an high level language compiler based on Linux platform that emits 
+klang is an high level language compiler based on Linux platform that emits 
 Netwide Assembler(NASM) x86 assembly. You can develop simple programs as well as 
 low-level applications such as writing OS components.
 
 # What Can It Do?
 
-Through xlang, users can write programs according to the syntax of the language provided in 
+Through klang, users can write programs according to the syntax of the language provided in 
 Grammar and produce Intel x86 assembly language.
 
 Simplifying the generated assembly by backend of the compiler that can be understand by anyone 
@@ -20,7 +20,7 @@ variables used, local variables location on stack and their sizes, expressions e
 
 # Features
 
-At present, xlang has a set of **core features** as below:
+At present, klang has a set of **core features** as below:
 
   - Support for using 8-bit, 16-bit and 32-bit registers.
   - Support for simple expression assembly generation.
@@ -37,7 +37,7 @@ At present, xlang has a set of **core features** as below:
 See **doc** directory for documentation.
 Or see the manual,
 
-    $ man xlang
+    $ man klang
 
 # Installation and Uninstallation
 
@@ -48,30 +48,29 @@ Or see the manual,
 
 ### Step 1: Getting the Source Code
 
-You can download xlang by command:
+You can download klang by command:
 
-    $ git clone https://github.com/pritamzope/xlang.git
-    $ cd xlang
+    $ git clone https://github.com/kushal-kothari/klang.git
+    $ cd klang
 
-or you can get xlang via other ways you prefer at <https://github.com/pritamzope/xlang>
 
 ### Step 2: Compile and Install
 
-Installing xlang requires root(super user)'s privilege. Run command:
+Installing klang requires root(super user)'s privilege. Run command:
 
     $ make
     $ sudo make install
 
 ## Uninstall
 
-To uninstall the xlang, just run command:
+To uninstall the klang, just run command:
 
-    $ cd xlang
+    $ cd klang
     $ sudo make remove
 
 # How to Start
 
-Create a file with .x file extension. Write a xlang program(see **doc** or **examples**).
+Create a file with .x file extension. Write a klang program(see **doc** or **examples**).
 Compile the program and Run it.
 
 ## Example
@@ -91,18 +90,18 @@ Create a file named "hello_world.x" which reads as follow:
         printf("sum: %d\n", sum);
     }
 
-Then run xlang in the terminal
+Then run klang in the terminal
 
-    $ xlang hello_world.x
+    $ klang hello_world.x
 
 You can run the program after compilation:
 
     $ ./a.out
 
 To see the generated Intel x86 assembly, 
-Then run xlang in the terminal with **-S** option.
+Then run klang in the terminal with **-S** option.
 
-    $ xlang -S hello_world.x
+    $ klang -S hello_world.x
 
 It will create a new file "hello_world.asm" which reads as follows:
 
